@@ -138,7 +138,9 @@ FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
--- Joining more than 2 tables and recreate table emp_info
+-- LIST 1 INFORMATION OF CURRENT EMPLOYEE
+
+-- JOINING MORE THAN TWO TABLES
 SELECT e.emp_no,
 	e.first_name,
 	e.last_name,
@@ -154,3 +156,33 @@ ON (e.emp_no = de.emp_no)
 WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
 AND (de.to_date = '9999-01-01');
+
+-- LIST 2 MANAGEMENT
+
+-- List of managers per department
+SELECT  dm.dept_no,
+        d.dept_name,
+        dm.emp_no,
+        ce.last_name,
+        ce.first_name,
+        dm.from_date,
+        dm.to_date
+INTO manager_info
+FROM dept_manager AS dm
+    INNER JOIN departments AS d
+        ON (dm.dept_no = d.dept_no)
+    INNER JOIN current_emp AS ce
+        ON (dm.emp_no = ce.emp_no);
+
+-- LIST 3 DEPARTMENT RETIREES
+
+-- Current data by departments
+SELECT ce.emp_no,
+ce.first_name,
+ce.last_name,
+d.dept_name
+FROM current_emp as ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no);
