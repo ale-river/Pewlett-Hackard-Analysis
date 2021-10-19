@@ -14,5 +14,7 @@ ERD Retirement Lists
 ## **Summary** :white_haired_woman::person_white_hair::older_man::older_woman:
 PdAdmin program allowed us to use several SQL statements such as `GROUP BY`, `ORDER BY`, differnt forms of joints `SELECT DISTINCT`, `COUNT` with the purpose to retrive information that is esential for the company in order to verify expenses on retire employees.
 After running some queries, there were designed 14 tables that are saved in the Data Folder.
+
+Final Results:
 ![Tables](Tables.png)
 
