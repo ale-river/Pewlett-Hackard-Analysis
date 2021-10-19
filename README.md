@@ -8,7 +8,7 @@ During the challenge Visual Studio Code (VS Code) helped to create SQL queries b
 The queries results are lists that answer questions about insights of the data. SQL is a great tool to do research and identify the `Primary Key` and `Foreign Key` of the databases.
 
 ERD Retirement Lists
-![Retirement list](ale-river/Pewlett-Hackard-Analysis)
+![Retirement list](Pewlett-Hackard-Analysis/EmployeeDB.png)
 
 ## **Summary** :white_haired_woman::person_white_hair::older_man::older_woman:
 dAdmin program allowed us to use several SQL statements such as `GROUP BY`, `ORDER BY`, differnt forms of joints `SELECT DISTINCT`, `COUNT` with the purpose to retrive information that is esential for the company in order to verify expenses on retire employees.
